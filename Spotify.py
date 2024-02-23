@@ -20,12 +20,11 @@ def descargar_cancion(lista):
     #Comando para ejecutar spotdl con la URL de la canción
     # Obtener la ruta al directorio superior
     # ojo colocar la ruta de su equipo 
-    
-    ruta = "/Volumes/KINGSTON/proyectos/Spotify/Descargas"
-    os.chdir(ruta)
+    directorio_actual= os.getcwd() + "/Descargas"
+    os.chdir(directorio_actual)
     for  url in lista:
         print(url)
-        ruta_lista=ruta + "/"+ url[0]
+        ruta_lista=directorio_actual + "/"+ url[0]
         os.makedirs(url[0])
         os.chdir(ruta_lista)
         comando = ["spotdl", url[1]]
@@ -35,7 +34,7 @@ def descargar_cancion(lista):
             resultado = subprocess.run(comando, capture_output=True, text=True, check=True)
             salida = resultado.stdout
             print(salida)
-            os.chdir(ruta)
+            os.chdir(directorio_actual)
         except subprocess.CalledProcessError as e:
             print("Error al descargar la canción:", e)
 
@@ -46,5 +45,3 @@ def descargar_cancion(lista):
 
 #Llamar a la función para descargar la canción
 descargar_cancion(playlist())
-#playlist()
-
