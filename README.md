@@ -1,6 +1,12 @@
 #Tools
 Para descargar camciones o lista desde Spotify
 
+descargar con pip spotdl
+
+pip install spotdl
+spotdl --download-ffmpeg
+
+
 Tener en cuenta de ingresar el path para correr la app 
 
 En el archivo playlist.json es un ejemplo de como debe formarse la url de la lista o la cancion sale de spotify desde compartir -> copia enlace plylist 
@@ -15,7 +21,3 @@ En el archivo playlist.json es un ejemplo de como debe formarse la url de la lis
     ]
 }
 ```
-
-
-
-
