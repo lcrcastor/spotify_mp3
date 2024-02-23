@@ -1,0 +1,10 @@
+descargar con pip spotdl
+
+pip install spotdl
+spotdl --download-ffmpeg
+
+modo de uso spotdl + url del playlist 
+
+
+
+
