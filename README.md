@@ -3,9 +3,11 @@ Para descargar camciones o lista desde Spotify
 
 descargar con pip spotdl
 
+```python
 pip install spotdl
 spotdl --download-ffmpeg
 
+```
 
 Tener en cuenta de ingresar el path para correr la app 
 
